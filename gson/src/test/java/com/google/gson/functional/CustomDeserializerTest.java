@@ -28,8 +28,8 @@ import com.google.gson.JsonParseException;
 import com.google.gson.common.TestTypes.Base;
 import com.google.gson.common.TestTypes.ClassWithBaseField;
 import java.lang.reflect.Type;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional Test exercising custom deserialization only. When test applies to both serialization
@@ -43,7 +43,7 @@ public class CustomDeserializerTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson =
         new GsonBuilder()

@@ -22,7 +22,7 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 /**
  * Handy asserts that we wish were present in {@link Assert} so that we didn't have to write them.
@@ -44,15 +44,15 @@ public class MoreAsserts {
         return;
       }
     }
-    Assert.fail(value + " not present in " + collection);
+    Assertions.fail(value + " not present in " + collection);
   }
 
   public static void assertEqualsAndHashCode(Object a, Object b) {
-    Assert.assertTrue(a.equals(b));
-    Assert.assertTrue(b.equals(a));
-    Assert.assertEquals(a.hashCode(), b.hashCode());
-    Assert.assertFalse(a.equals(null));
-    Assert.assertFalse(a.equals(new Object()));
+    Assertions.assertTrue(a.equals(b));
+    Assertions.assertTrue(b.equals(a));
+    Assertions.assertEquals(a.hashCode(), b.hashCode());
+    Assertions.assertFalse(a.equals(null));
+    Assertions.assertFalse(a.equals(new Object()));
   }
 
   private static boolean isProtectedOrPublic(Method method) {
@@ -102,7 +102,7 @@ public class MoreAsserts {
     }
 
     if (!requiredOverriddenMethods.isEmpty()) {
-      Assert.fail(
+      Assertions.fail(
           subClass.getSimpleName() + " must override these methods: " + requiredOverriddenMethods);
     }
   }

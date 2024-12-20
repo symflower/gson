@@ -23,7 +23,7 @@ import com.google.gson.annotations.Since;
 import com.google.gson.annotations.Until;
 import com.google.gson.internal.Excluder;
 import java.lang.reflect.Field;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the {@link Excluder} class.

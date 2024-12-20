@@ -17,7 +17,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -27,8 +27,8 @@ import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 public class MapAsArrayTypeAdapterTest {
 
@@ -58,7 +58,7 @@ public class MapAsArrayTypeAdapterTest {
   }
 
   @Test
-  @Ignore("we no longer hash keys at serialization time")
+  @Disabled("we no longer hash keys at serialization time")
   public void testTwoTypesCollapseToOneSerialize() {
     Gson gson = new GsonBuilder().enableComplexMapKeySerialization().create();
 

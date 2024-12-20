@@ -17,14 +17,14 @@
 package com.google.gson;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the {@link FieldAttributes} class.
@@ -35,7 +35,7 @@ import org.junit.Test;
 public class FieldAttributesTest {
   private FieldAttributes fieldAttributes;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     fieldAttributes = new FieldAttributes(Foo.class.getField("bar"));
   }

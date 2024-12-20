@@ -20,7 +20,7 @@ package com.google.gson.jpms_test.opened;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.Gson;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Verifies that Gson can use reflection for classes in a package if it has been 'opened' to the

@@ -20,7 +20,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.internal.Excluder;
 import java.lang.reflect.Field;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for GsonBuilder.EXCLUDE_INNER_CLASSES.

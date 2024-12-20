@@ -17,9 +17,9 @@
 package com.google.gson.it;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.fail;
-import static org.junit.Assume.assumeTrue;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import com.example.UnusedClass;
 import java.lang.reflect.InvocationTargetException;
@@ -32,8 +32,8 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiConsumer;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
@@ -54,7 +54,7 @@ public class ShrinkingIT {
 
   @Parameter public Path jarToTest;
 
-  @Before
+  @BeforeEach
   public void verifyJarExists() {
     if (!Files.isRegularFile(jarToTest)) {
       fail("JAR file " + jarToTest + " does not exist; run this test with `mvn clean verify`");

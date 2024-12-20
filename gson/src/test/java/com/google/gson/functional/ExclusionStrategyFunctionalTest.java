@@ -28,8 +28,8 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Performs some functional tests when Gson is instantiated with some common user defined {@link
@@ -54,7 +54,7 @@ public class ExclusionStrategyFunctionalTest {
 
   private SampleObjectForTest src;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     src = new SampleObjectForTest();
   }

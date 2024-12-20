@@ -17,7 +17,7 @@ package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -56,9 +56,9 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.TreeSet;
 import java.util.UUID;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional test for Json serialization and deserialization for common classes for which default
@@ -73,7 +73,7 @@ public class DefaultTypeAdaptersTest {
   private TimeZone oldTimeZone;
   private Locale oldLocale;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     this.oldTimeZone = TimeZone.getDefault();
     TimeZone.setDefault(TimeZone.getTimeZone("America/Los_Angeles"));
@@ -82,7 +82,7 @@ public class DefaultTypeAdaptersTest {
     gson = new Gson();
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     TimeZone.setDefault(oldTimeZone);
     Locale.setDefault(oldLocale);

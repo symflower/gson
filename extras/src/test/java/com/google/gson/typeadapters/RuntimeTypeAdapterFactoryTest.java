@@ -17,13 +17,13 @@
 package com.google.gson.typeadapters;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public final class RuntimeTypeAdapterFactoryTest {
 

@@ -17,7 +17,7 @@
 package com.google.gson.internal.bind;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
@@ -26,7 +26,7 @@ import com.google.gson.Strictness;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.MalformedJsonException;
 import java.io.IOException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("resource")
 public final class JsonElementReaderTest {

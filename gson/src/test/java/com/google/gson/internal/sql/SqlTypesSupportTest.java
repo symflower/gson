@@ -18,7 +18,7 @@ package com.google.gson.internal.sql;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SqlTypesSupportTest {
   @Test

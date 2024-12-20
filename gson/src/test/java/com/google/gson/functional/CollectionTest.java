@@ -40,8 +40,8 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 import java.util.Vector;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for Json serialization and deserialization of collections.
@@ -52,7 +52,7 @@ import org.junit.Test;
 public class CollectionTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

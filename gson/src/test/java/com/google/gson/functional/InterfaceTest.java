@@ -19,8 +19,8 @@ package com.google.gson.functional;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.Gson;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests involving interfaces.
@@ -34,7 +34,7 @@ public class InterfaceTest {
   private Gson gson;
   private TestObject obj;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
     obj = new TestObject("StringValue");

@@ -28,8 +28,8 @@ import java.io.IOException;
 import java.nio.file.attribute.GroupPrincipal;
 import java.nio.file.attribute.UserPrincipal;
 import java.security.Principal;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class Java17ReflectiveTypeAdapterFactoryTest {
 
@@ -39,7 +39,7 @@ public class Java17ReflectiveTypeAdapterFactoryTest {
   // have record support at the language level for these tests. This class was added in JDK 16.
   Class<?> unixDomainPrincipalClass;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     unixDomainPrincipalClass = Class.forName("jdk.net.UnixDomainPrincipal");
   }

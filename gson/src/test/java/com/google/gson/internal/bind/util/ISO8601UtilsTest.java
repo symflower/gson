@@ -17,7 +17,7 @@
 package com.google.gson.internal.bind.util;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.text.ParseException;
 import java.text.ParsePosition;
@@ -26,7 +26,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("MemberName") // class name
 public class ISO8601UtilsTest {

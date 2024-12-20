@@ -24,8 +24,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.InstanceCreator;
 import com.google.gson.annotations.Expose;
 import java.lang.reflect.Type;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the regarding functional "@Expose" type tests.
@@ -36,7 +36,7 @@ public class ExposeFieldsTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson =
         new GsonBuilder()

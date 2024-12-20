@@ -25,9 +25,9 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Locale;
 import java.util.TimeZone;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 // Suppression for `java.sql.Date` to make it explicit that this is not `java.util.Date`
 @SuppressWarnings("UnnecessarilyFullyQualified")
@@ -36,7 +36,7 @@ public class SqlTypesGsonTest {
   private TimeZone oldTimeZone;
   private Locale oldLocale;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     this.oldTimeZone = TimeZone.getDefault();
     TimeZone.setDefault(TimeZone.getTimeZone("America/Los_Angeles"));
@@ -45,7 +45,7 @@ public class SqlTypesGsonTest {
     gson = new Gson();
   }
 
-  @After
+  @AfterEach
   public void tearDown() throws Exception {
     TimeZone.setDefault(oldTimeZone);
     Locale.setDefault(oldLocale);

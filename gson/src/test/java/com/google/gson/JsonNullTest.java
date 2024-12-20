@@ -19,7 +19,7 @@ package com.google.gson;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.common.MoreAsserts;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests handling of JSON nulls.

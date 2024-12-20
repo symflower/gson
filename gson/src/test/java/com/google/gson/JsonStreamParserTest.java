@@ -16,12 +16,12 @@
 package com.google.gson;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.EOFException;
 import java.util.NoSuchElementException;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for {@link JsonStreamParser}
@@ -31,7 +31,7 @@ import org.junit.Test;
 public class JsonStreamParserTest {
   private JsonStreamParser parser;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     parser = new JsonStreamParser("'one' 'two'");
   }

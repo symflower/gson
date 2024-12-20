@@ -40,7 +40,7 @@ import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Functional tests for the {@link JsonAdapter} annotation on fields. */
 public final class JsonAdapterAnnotationOnFieldsTest {

@@ -16,7 +16,7 @@
 package com.google.gson.protobuf.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.common.base.CaseFormat;
 import com.google.gson.Gson;
@@ -29,8 +29,8 @@ import com.google.gson.protobuf.generated.Bag.OuterMessage;
 import com.google.gson.protobuf.generated.Bag.ProtoWithAnnotations;
 import com.google.gson.protobuf.generated.Bag.ProtoWithAnnotations.InnerMessage;
 import com.google.protobuf.GeneratedMessage;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for protocol buffers using annotations for field names and enum values.
@@ -42,7 +42,7 @@ public class ProtosWithAnnotationsTest {
   private Gson gsonWithEnumNumbers;
   private Gson gsonWithLowerHyphen;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     ProtoTypeAdapter.Builder protoTypeAdapter =
         ProtoTypeAdapter.newBuilder()

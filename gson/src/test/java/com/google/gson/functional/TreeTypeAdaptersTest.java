@@ -33,8 +33,8 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /** Collection of functional tests for DOM tree based type adapters. */
 public class TreeTypeAdaptersTest {
@@ -49,7 +49,7 @@ public class TreeTypeAdaptersTest {
   private Gson gson;
   private Course<HistoryCourse> course;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     gson = new GsonBuilder().registerTypeAdapter(Id.class, new IdTreeTypeAdapter()).create();
     course =

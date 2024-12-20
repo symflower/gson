@@ -21,8 +21,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.util.Arrays;
 import java.util.Collection;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests to validate serialization of parameterized types without explicit types
@@ -33,7 +33,7 @@ public class RawSerializationTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

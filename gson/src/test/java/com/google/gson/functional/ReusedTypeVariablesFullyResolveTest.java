@@ -23,8 +23,8 @@ import com.google.gson.GsonBuilder;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Set;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * This test covers the scenario described in #1390 where a type variable needs to be used by a type
@@ -35,7 +35,7 @@ public class ReusedTypeVariablesFullyResolveTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     gson = new GsonBuilder().create();
   }

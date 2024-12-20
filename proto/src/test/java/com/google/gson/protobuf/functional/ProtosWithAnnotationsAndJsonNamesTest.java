@@ -24,7 +24,7 @@ import com.google.gson.protobuf.generated.Annotations;
 import com.google.gson.protobuf.generated.Bag.ProtoWithAnnotationsAndJsonNames;
 import com.google.protobuf.GeneratedMessage;
 import java.util.Map;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for protocol buffers using annotations and custom json_name values for field

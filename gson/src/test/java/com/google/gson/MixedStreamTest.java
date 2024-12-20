@@ -17,7 +17,7 @@
 package com.google.gson;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -28,7 +28,7 @@ import java.io.StringWriter;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public final class MixedStreamTest {
 

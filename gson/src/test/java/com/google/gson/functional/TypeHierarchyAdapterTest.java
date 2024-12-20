@@ -29,7 +29,7 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Test that the hierarchy adapter works when subtypes are used. */
 public final class TypeHierarchyAdapterTest {

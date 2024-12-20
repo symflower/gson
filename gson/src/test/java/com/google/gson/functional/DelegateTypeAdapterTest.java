@@ -28,8 +28,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for {@link Gson#getDelegateAdapter(TypeAdapterFactory, TypeToken)} method.
@@ -41,7 +41,7 @@ public class DelegateTypeAdapterTest {
   private StatsTypeAdapterFactory stats;
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     stats = new StatsTypeAdapterFactory();
     gson = new GsonBuilder().registerTypeAdapterFactory(stats).create();

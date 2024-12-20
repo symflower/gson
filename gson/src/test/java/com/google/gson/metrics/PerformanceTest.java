@@ -28,9 +28,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests to measure performance for Gson. All tests in this file will be disabled in code. To run
@@ -47,7 +47,7 @@ public class PerformanceTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }
@@ -58,7 +58,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testStringDeserialization() {
     StringBuilder sb = new StringBuilder(8096);
     sb.append("Error Yippie");
@@ -116,7 +116,7 @@ public class PerformanceTest {
 
   /** Created in response to http://code.google.com/p/google-gson/issues/detail?id=96 */
   @Test
-  @Ignore
+  @Disabled
   public void testLargeCollectionSerialization() {
     int count = 1400000;
     List<CollectionEntry> list = new ArrayList<>(count);
@@ -128,7 +128,7 @@ public class PerformanceTest {
 
   /** Created in response to http://code.google.com/p/google-gson/issues/detail?id=96 */
   @Test
-  @Ignore
+  @Disabled
   public void testLargeCollectionDeserialization() {
     StringBuilder sb = new StringBuilder();
     int count = 87000;
@@ -152,7 +152,7 @@ public class PerformanceTest {
   /** Created in response to http://code.google.com/p/google-gson/issues/detail?id=96 */
   // Last I tested, Gson was able to serialize upto 14MB byte array
   @Test
-  @Ignore
+  @Disabled
   public void testByteArraySerialization() {
     for (int size = 4145152; true; size += 1036288) {
       byte[] ba = new byte[size];
@@ -167,7 +167,7 @@ public class PerformanceTest {
   /** Created in response to http://code.google.com/p/google-gson/issues/detail?id=96 */
   // Last I tested, Gson was able to deserialize a byte array of 11MB
   @Test
-  @Ignore
+  @Disabled
   public void testByteArrayDeserialization() {
     for (int numElements = 10639296; true; numElements += 16384) {
       StringBuilder sb = new StringBuilder(numElements * 2);
@@ -198,7 +198,7 @@ public class PerformanceTest {
   // Deserialized exposed classes avg time: 173 ms
 
   @Test
-  @Ignore
+  @Disabled
   public void testSerializeClasses() {
     ClassWithList c = new ClassWithList("str");
     for (int i = 0; i < COLLECTION_SIZE; ++i) {
@@ -215,7 +215,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testDeserializeClasses() {
     String json = buildJsonForClassWithList();
     ClassWithList[] target = new ClassWithList[NUM_ITERATIONS];
@@ -229,7 +229,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testLargeObjectSerializationAndDeserialization() {
     Map<String, Long> largeObject = new HashMap<>();
     for (long l = 0; l < 100000; l++) {
@@ -248,7 +248,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testSerializeExposedClasses() {
     ClassWithListOfObjects c1 = new ClassWithListOfObjects("str");
     for (int i1 = 0; i1 < COLLECTION_SIZE; ++i1) {
@@ -266,7 +266,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testDeserializeExposedClasses() {
     String json = buildJsonForClassWithList();
     ClassWithListOfObjects[] target = new ClassWithListOfObjects[NUM_ITERATIONS];
@@ -280,7 +280,7 @@ public class PerformanceTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void testLargeGsonMapRoundTrip() throws Exception {
     Map<Long, Long> original = new HashMap<>();
     for (long i = 0; i < 1000000; i++) {

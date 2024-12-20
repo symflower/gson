@@ -30,7 +30,7 @@ import com.google.gson.common.TestTypes.ClassWithBaseArrayField;
 import com.google.gson.common.TestTypes.ClassWithBaseField;
 import com.google.gson.common.TestTypes.Sub;
 import com.google.gson.common.TestTypes.SubSerializer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional Test exercising custom serialization only. When test applies to both serialization and

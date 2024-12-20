@@ -26,7 +26,7 @@ import static com.google.gson.stream.JsonToken.NAME;
 import static com.google.gson.stream.JsonToken.NULL;
 import static com.google.gson.stream.JsonToken.NUMBER;
 import static com.google.gson.stream.JsonToken.STRING;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Strictness;
 import java.io.EOFException;
@@ -34,8 +34,8 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.util.Arrays;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("resource")
 public final class JsonReaderTest {
@@ -839,9 +839,9 @@ public final class JsonReaderTest {
     JsonReader strictReader = new JsonReader(reader(s));
     var e =
         assertThrows(
-            "Should have failed reading " + s + " as double",
             MalformedJsonException.class,
-            () -> strictReader.nextDouble());
+            () -> strictReader.nextDouble(),
+            "Should have failed reading " + s + " as double");
     assertThat(e)
         .hasMessageThat()
         .startsWith("Use JsonReader.setStrictness(Strictness.LENIENT) to accept malformed JSON");
@@ -909,7 +909,7 @@ public final class JsonReaderTest {
    * Double.parseDouble() for fractional values.
    */
   @Test
-  @Ignore
+  @Disabled
   public void testPeekLargerThanLongMaxValue() throws IOException {
     JsonReader reader = new JsonReader(reader("[9223372036854775808]"));
     reader.setStrictness(Strictness.LENIENT);
@@ -923,7 +923,7 @@ public final class JsonReaderTest {
    * Double.parseDouble() for fractional values.
    */
   @Test
-  @Ignore
+  @Disabled
   public void testPeekLargerThanLongMinValue() throws IOException {
     @SuppressWarnings("FloatingPointLiteralPrecision")
     double d = -9223372036854775809d;
@@ -940,7 +940,7 @@ public final class JsonReaderTest {
    * Double.parseDouble() for fractional values.
    */
   @Test
-  @Ignore
+  @Disabled
   public void testHighPrecisionLong() throws IOException {
     String json = "[9223372036854775806.000]";
     JsonReader reader = new JsonReader(reader(json));

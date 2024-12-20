@@ -17,7 +17,7 @@
 package com.google.gson.typeadapters;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.PostConstruct;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class PostConstructAdapterFactoryTest {
   @Test
