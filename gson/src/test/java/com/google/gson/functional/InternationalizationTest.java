@@ -19,8 +19,8 @@ package com.google.gson.functional;
 import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.Gson;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for internationalized strings.
@@ -30,7 +30,7 @@ import org.junit.Test;
 public class InternationalizationTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

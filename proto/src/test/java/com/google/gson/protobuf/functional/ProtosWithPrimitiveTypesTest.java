@@ -23,13 +23,13 @@ import com.google.gson.protobuf.ProtoTypeAdapter;
 import com.google.gson.protobuf.ProtoTypeAdapter.EnumSerialization;
 import com.google.gson.protobuf.generated.Bag.SimpleProto;
 import com.google.protobuf.GeneratedMessage;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ProtosWithPrimitiveTypesTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson =
         new GsonBuilder()

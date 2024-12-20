@@ -30,7 +30,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TypeAdapterRuntimeTypeWrapperTest {
   private static class Base {}

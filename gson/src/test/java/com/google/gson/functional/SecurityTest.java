@@ -21,8 +21,8 @@ import static com.google.common.truth.Truth.assertThat;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.common.TestTypes.BagOfPrimitives;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests for security-related aspects of Gson
@@ -35,7 +35,7 @@ public class SecurityTest {
 
   private GsonBuilder gsonBuilder;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gsonBuilder = new GsonBuilder();
   }

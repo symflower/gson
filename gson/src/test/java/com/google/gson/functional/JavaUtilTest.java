@@ -21,14 +21,14 @@ import static com.google.common.truth.Truth.assertThat;
 import com.google.gson.Gson;
 import java.util.Currency;
 import java.util.Properties;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /** Functional test for Json serialization and deserialization for classes in java.util */
 public class JavaUtilTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

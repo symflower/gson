@@ -23,8 +23,8 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Type;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the {@code GenericArrayType}s created by the {@link $Gson$Types} class.
@@ -35,7 +35,7 @@ import org.junit.Test;
 public class GenericArrayTypeTest {
   private GenericArrayType ourType;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     ourType =
         $Gson$Types.arrayOf(

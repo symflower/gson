@@ -19,8 +19,8 @@ package com.google.gson;
 import static com.google.common.truth.Truth.assertThat;
 
 import java.net.InetAddress;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for the default serializer/deserializer for the {@code InetAddress} type.
@@ -30,7 +30,7 @@ import org.junit.Test;
 public class DefaultInetAddressTypeAdapterTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

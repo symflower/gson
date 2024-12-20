@@ -30,8 +30,8 @@ import com.google.gson.common.TestTypes.BagOfPrimitives;
 import com.google.gson.common.TestTypes.ClassWithObjects;
 import java.lang.reflect.Type;
 import java.util.Collection;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for the different cases for serializing (or ignoring) null fields and object.
@@ -42,7 +42,7 @@ import org.junit.Test;
 public class NullObjectAndFieldTest {
   private GsonBuilder gsonBuilder;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gsonBuilder = new GsonBuilder().serializeNulls();
   }

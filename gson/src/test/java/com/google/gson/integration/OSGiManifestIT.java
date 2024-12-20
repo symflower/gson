@@ -17,7 +17,7 @@ package com.google.gson.integration;
 
 import static com.google.common.truth.Truth.assertThat;
 import static com.google.common.truth.Truth.assertWithMessage;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import com.google.common.base.Splitter;
 import com.google.gson.internal.GsonBuildConfig;
@@ -30,8 +30,8 @@ import java.util.List;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 import java.util.stream.Collectors;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Performs assertions on the generated OSGi manifest attributes. This is an integration test
@@ -60,7 +60,7 @@ public class OSGiManifestIT {
   private static final String GSON_VERSION = GsonBuildConfig.VERSION;
   private Attributes manifestAttributes;
 
-  @Before
+  @BeforeEach
   public void getGsonManifestAttributes() throws Exception {
     ManifestData manifestData = findManifest("com.google.gson");
     // Make sure manifest was loaded from final Gson JAR (and not intermediate manifest is used)

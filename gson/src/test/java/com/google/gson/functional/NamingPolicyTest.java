@@ -16,7 +16,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.FieldNamingStrategy;
@@ -27,8 +27,8 @@ import com.google.gson.common.TestTypes.ClassWithSerializedNameFields;
 import com.google.gson.common.TestTypes.StringWrapper;
 import java.lang.reflect.Field;
 import java.util.Locale;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for naming policies.
@@ -39,7 +39,7 @@ import org.junit.Test;
 public class NamingPolicyTest {
   private GsonBuilder builder;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     builder = new GsonBuilder();
   }

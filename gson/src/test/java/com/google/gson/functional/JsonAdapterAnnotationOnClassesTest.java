@@ -17,7 +17,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.common.base.Splitter;
 import com.google.gson.Gson;
@@ -40,7 +40,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Locale;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Functional tests for the {@link JsonAdapter} annotation on classes. */
 @SuppressWarnings("ClassNamedLikeTypeParameter") // for dummy classes A, B, ...

@@ -22,7 +22,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.Since;
 import com.google.gson.annotations.Until;
 import com.google.gson.common.TestTypes.BagOfPrimitives;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for versioning support in Gson.

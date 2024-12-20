@@ -34,7 +34,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for the {@link JsonAdapter} annotation on fields where the value is of type

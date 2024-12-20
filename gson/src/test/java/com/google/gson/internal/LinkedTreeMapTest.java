@@ -17,7 +17,7 @@
 package com.google.gson.internal;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.common.MoreAsserts;
 import java.io.ByteArrayInputStream;
@@ -30,7 +30,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public final class LinkedTreeMapTest {
 

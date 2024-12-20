@@ -22,8 +22,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /** Functional tests for leniency option. */
 public class LeniencyTest {
@@ -31,7 +31,7 @@ public class LeniencyTest {
   private Gson gson;
 
   @SuppressWarnings({"deprecation", "InlineMeInliner"}) // for GsonBuilder.setLenient
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new GsonBuilder().setLenient().create();
   }

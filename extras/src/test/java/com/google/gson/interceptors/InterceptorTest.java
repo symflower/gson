@@ -16,7 +16,7 @@
 package com.google.gson.interceptors;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -32,8 +32,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit tests for {@link Intercept} and {@link JsonPostDeserializer}.
@@ -44,7 +44,7 @@ public final class InterceptorTest {
 
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     this.gson =
         new GsonBuilder()

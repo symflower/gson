@@ -26,8 +26,8 @@ import com.google.gson.common.TestTypes.BagOfPrimitives;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for {@link Gson#toJsonTree(Object)} and {@link Gson#toJsonTree(Object,
@@ -39,7 +39,7 @@ import org.junit.Test;
 public class JsonTreeTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

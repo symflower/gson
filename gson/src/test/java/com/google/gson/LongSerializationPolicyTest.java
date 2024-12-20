@@ -18,7 +18,7 @@ package com.google.gson;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for the {@link LongSerializationPolicy} class.

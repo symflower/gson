@@ -19,7 +19,7 @@ import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public final class SerializedNameTest {
   private final Gson gson = new Gson();

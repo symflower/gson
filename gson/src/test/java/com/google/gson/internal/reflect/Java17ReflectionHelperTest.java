@@ -24,7 +24,7 @@ import java.lang.reflect.Method;
 import java.nio.file.attribute.GroupPrincipal;
 import java.nio.file.attribute.UserPrincipal;
 import java.util.Objects;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class Java17ReflectionHelperTest {
   @Test

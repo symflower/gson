@@ -20,8 +20,8 @@ import static com.google.common.truth.Truth.assertThat;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Performs some functional testing to ensure GSON infrastructure properly serializes/deserializes
@@ -35,7 +35,7 @@ public class FieldExclusionTest {
 
   private Outer outer;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     outer = new Outer();
   }

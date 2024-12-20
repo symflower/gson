@@ -17,11 +17,11 @@
 package com.google.gson.jpms_test;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Verifies that Gson cannot use reflection for classes in a package if it has not been 'opened' to

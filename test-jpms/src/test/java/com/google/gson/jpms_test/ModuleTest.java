@@ -26,7 +26,7 @@ import java.net.URL;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Verifies that this test project is properly set up and has a module descriptor, and checks Gson's

@@ -17,7 +17,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
@@ -52,9 +52,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for Json serialization and deserialization of regular classes.
@@ -67,7 +67,7 @@ public class ObjectTest {
   private TimeZone oldTimeZone;
   private Locale oldLocale;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
 
@@ -77,7 +77,7 @@ public class ObjectTest {
     Locale.setDefault(Locale.US);
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     TimeZone.setDefault(oldTimeZone);
     Locale.setDefault(oldLocale);

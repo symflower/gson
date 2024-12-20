@@ -17,7 +17,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -43,7 +43,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.AssumptionViolatedException;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ReflectionAccessFilterTest {
   // Reader has protected `lock` field which cannot be accessed
@@ -68,9 +68,9 @@ public class ReflectionAccessFilterTest {
     // Note: This test is rather brittle and depends on the JDK implementation
     var e =
         assertThrows(
-            "Expected exception; test needs to be run with Java >= 9",
             JsonIOException.class,
-            () -> gson.toJson(new File("a")));
+            () -> gson.toJson(new File("a")),
+            "Expected exception; test needs to be run with Java >= 9");
     assertThat(e)
         .hasMessageThat()
         .isEqualTo(
@@ -111,9 +111,9 @@ public class ReflectionAccessFilterTest {
 
     var e =
         assertThrows(
-            "Expected exception; test needs to be run with Java >= 9",
             JsonIOException.class,
-            () -> gson.toJson(new ClassExtendingJdkClass()));
+            () -> gson.toJson(new ClassExtendingJdkClass()),
+            "Expected exception; test needs to be run with Java >= 9");
     assertThat(e)
         .hasMessageThat()
         .isEqualTo(
@@ -174,9 +174,9 @@ public class ReflectionAccessFilterTest {
 
     var e =
         assertThrows(
-            "Expected exception; test needs to be run with Java >= 9",
             JsonIOException.class,
-            () -> gson.toJson(new ClassWithStaticField()));
+            () -> gson.toJson(new ClassWithStaticField()),
+            "Expected exception; test needs to be run with Java >= 9");
     assertThat(e)
         .hasMessageThat()
         .isEqualTo(
@@ -265,9 +265,9 @@ public class ReflectionAccessFilterTest {
     // First make sure test is implemented correctly and access is blocked
     var e =
         assertThrows(
-            "Expected exception; test needs to be run with Java >= 9",
             JsonIOException.class,
-            () -> gson.toJson(new ExtendingClassWithPrivateField()));
+            () -> gson.toJson(new ExtendingClassWithPrivateField()),
+            "Expected exception; test needs to be run with Java >= 9");
     assertThat(e)
         .hasMessageThat()
         .isEqualTo(
@@ -315,9 +315,9 @@ public class ReflectionAccessFilterTest {
 
     var e =
         assertThrows(
-            "Expected exception; test needs to be run with Java >= 9",
             JsonIOException.class,
-            () -> gson.fromJson("{}", ClassWithPrivateNoArgsConstructor.class));
+            () -> gson.fromJson("{}", ClassWithPrivateNoArgsConstructor.class),
+            "Expected exception; test needs to be run with Java >= 9");
     assertThat(e)
         .hasMessageThat()
         .isEqualTo(

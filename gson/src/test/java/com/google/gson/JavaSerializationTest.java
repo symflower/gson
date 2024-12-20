@@ -27,7 +27,7 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Map;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Check that Gson doesn't return non-serializable data types.

@@ -16,7 +16,7 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -28,8 +28,8 @@ import com.google.gson.common.TestTypes.ClassOverridingEquals;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collection;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests related to circular reference detection and error reporting.
@@ -40,7 +40,7 @@ import org.junit.Test;
 public class CircularReferenceTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

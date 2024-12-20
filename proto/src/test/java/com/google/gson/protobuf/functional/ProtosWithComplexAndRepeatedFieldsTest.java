@@ -27,8 +27,8 @@ import com.google.gson.protobuf.generated.Bag.ProtoWithDifferentCaseFormat;
 import com.google.gson.protobuf.generated.Bag.ProtoWithRepeatedFields;
 import com.google.gson.protobuf.generated.Bag.SimpleProto;
 import com.google.protobuf.GeneratedMessage;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for protocol buffers using complex and repeated fields
@@ -39,7 +39,7 @@ public class ProtosWithComplexAndRepeatedFieldsTest {
   private Gson gson;
   private Gson upperCamelGson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson =
         new GsonBuilder()

@@ -23,8 +23,8 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.common.TestTypes.BagOfPrimitives;
 import java.util.ArrayList;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Performs some functional test involving JSON output escaping.
@@ -35,7 +35,7 @@ import org.junit.Test;
 public class EscapingTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }

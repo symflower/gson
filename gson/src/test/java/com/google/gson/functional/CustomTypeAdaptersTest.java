@@ -39,9 +39,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for the support of custom serializer and deserializers.
@@ -52,7 +52,7 @@ import org.junit.Test;
 public class CustomTypeAdaptersTest {
   private GsonBuilder builder;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     builder = new GsonBuilder();
   }
@@ -95,7 +95,7 @@ public class CustomTypeAdaptersTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void disable_testCustomSerializersOfSelf() {
     Gson gson = createGsonObjectWithFooTypeAdapter();
     Gson basicGson = new Gson();
@@ -107,7 +107,7 @@ public class CustomTypeAdaptersTest {
   }
 
   @Test
-  @Ignore
+  @Disabled
   public void disable_testCustomDeserializersOfSelf() {
     Gson gson = createGsonObjectWithFooTypeAdapter();
     Gson basicGson = new Gson();

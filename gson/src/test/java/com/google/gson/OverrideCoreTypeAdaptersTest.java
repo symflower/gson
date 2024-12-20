@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Locale;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests handling of Core Type Adapters

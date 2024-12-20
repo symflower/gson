@@ -22,7 +22,7 @@ import static com.google.common.truth.Truth.assertWithMessage;
 import com.google.gson.functional.FieldNamingTest;
 import java.lang.reflect.Field;
 import java.util.Locale;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Performs tests directly against {@link FieldNamingPolicy}; for integration tests see {@link

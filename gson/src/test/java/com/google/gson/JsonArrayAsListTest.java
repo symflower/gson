@@ -17,7 +17,7 @@
 package com.google.gson;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.common.MoreAsserts;
 import java.util.Arrays;
@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Spliterator;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Tests for {@link JsonArray#asList()}. */
 public class JsonArrayAsListTest {

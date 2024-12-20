@@ -33,7 +33,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /** Functional tests for the RuntimeTypeAdapterFactory feature in extras. */
 public final class RuntimeTypeAdapterFactoryFunctionalTest {

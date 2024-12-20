@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional Test exercising custom deserialization only. When test applies to both serialization

@@ -17,12 +17,12 @@
 package com.google.gson.functional;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Functional tests for enums with Proguard.
@@ -32,7 +32,7 @@ import org.junit.Test;
 public class EnumWithObfuscatedTest {
   private Gson gson;
 
-  @Before
+  @BeforeEach
   public void setUp() throws Exception {
     gson = new Gson();
   }
@@ -49,9 +49,9 @@ public class EnumWithObfuscatedTest {
   public void testEnumClassWithObfuscated() {
     for (Gender enumConstant : Gender.class.getEnumConstants()) {
       assertThrows(
-          "Enum is not obfuscated",
           NoSuchFieldException.class,
-          () -> Gender.class.getField(enumConstant.name()));
+          () -> Gender.class.getField(enumConstant.name()),
+          "Enum is not obfuscated");
     }
 
     assertThat(gson.fromJson("\"MAIL\"", Gender.class)).isEqualTo(Gender.MALE);

@@ -17,11 +17,11 @@
 package com.google.gson.internal;
 
 import static com.google.common.truth.Truth.assertThat;
-import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.IOException;
 import java.io.Writer;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StreamsTest {
   @Test

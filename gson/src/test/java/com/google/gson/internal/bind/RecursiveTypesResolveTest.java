@@ -21,7 +21,7 @@ import static com.google.common.truth.Truth.assertThat;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;
 import com.google.gson.internal.$Gson$Types;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test fixes for infinite recursion on {@link $Gson$Types#resolve(java.lang.reflect.Type, Class,
